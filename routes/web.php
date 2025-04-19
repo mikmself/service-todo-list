@@ -8,4 +8,5 @@ Route::get('/', function () {
 
 Route::prefix('api')->group(function (){
     Route::resource('users', \App\Http\Controllers\UserController::class)->except(['create', 'edit']);
+    Route::resource('categories', \App\Http\Controllers\CategoryController::class)->except(['create', 'edit']);
 })->middleware('api');
